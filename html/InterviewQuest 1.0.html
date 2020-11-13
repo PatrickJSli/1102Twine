@@ -14,7 +14,7 @@
 <tw-storydata name="InterviewQuest 1.0" startnode="1" creator="Twine" creator-version="2.3.9" ifid="BD2FF346-7DE6-4A68-9C57-1AB8E1864DAE" zoom="1" format="Harlowe" format-version="3.1.0" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk&display=swap');
 tw-story {
   font-family: 'Space Grotesk', sans-serif; 
-  background-color: grey;
+  background-color: #c0c0c0;
 }
 tw-sidebar tw-icon.redo {
 	display: none;
@@ -27,11 +27,6 @@ tw-story[tags~="titleScreen"]
   text-align: center;
 }
  
-tw-story[tags~="question"]
-{
-  text-align: center;
-}
-
 tw-story[tags~="intro"]
 {
   text-align: center;
@@ -40,27 +35,58 @@ tw-story[tags~="intro"]
 tw-passage
 {
   color: black;
-  background-color:grey;
-  
-}</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Title" tags="titleScreen" position="399,170" size="100,100">Welcome to
+}
+tw-story[tags~="credits"]
+{
+  font-size: 16px;
+}
+tw-story[tags~="resume"]
+{
+  font-size: 16px;
+}
+tw-story[tags~="question"]
+{
+  font-size: 18px;
+}
+tw-story[tags~="blankBackground"] {
+  	background-image:url("https://github.com/PatrickJSli/1102Twine/blob/main/img/MainBackground.png?raw=true");
+  	background-repeat: no-repeat;
+  	background-attachment: fixed;
+  	background-size: 90% 90%;
+  	background-position: center;
+}
+tw-story[tags~="loadingBackground"] {
+  	background-image:url("https://github.com/PatrickJSli/1102Twine/blob/main/img/LoadingScreen3.png?raw=true");
+  	background-repeat: no-repeat;
+  	background-attachment: fixed;
+  	background-size: 90% 90%;
+  	background-position: center;
+}
+tw-story[tags~="interviewBackground"] {
+  	background-image:url("https://github.com/PatrickJSli/1102Twine/blob/main/img/InterviewScreen2.png?raw=true");
+  	background-repeat: no-repeat;
+  	background-attachment: fixed;
+  	background-size: 90% 90%;
+  	background-position: center;
+}</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Title" tags="titleScreen blankBackground" position="399,170" size="100,100">Welcome to
 #InterviewQuest
 [[Play]]
 (link: &quot;Quit&quot;)[&lt;script&gt;window.close()&lt;/script&gt;]
-[[Credits]]</tw-passagedata><tw-passagedata pid="2" name="Play" tags="" position="296,310" size="100,100">COVID has hit the job market hard, and many companies have rejected you and your flawless resume. One out of the hundreds you applied to has offered you an interview. Your college degree was rather expensive, but it’s not proving to be the job securing ace in the hole that your parents made it out to be. The anxiety of ending this recruitment cycle empty handed once more is building, and yet that does little to make preparing for this interview any less nerve wracking.
+[[Credits]]</tw-passagedata><tw-passagedata pid="2" name="Play" tags="blankBackground" position="296,310" size="100,100">COVID has hit the job market hard, and many companies have rejected you and your flawless resume. One out of the hundreds you applied to has offered you an interview. Your college degree was rather expensive, but it’s not proving to be the job securing ace in the hole that your parents made it out to be. The anxiety of ending this recruitment cycle empty handed once more is building, and yet that does little to make preparing for this interview any less nerve wracking.
 [[Continue-&gt;Resume]]
 (set: $arrogance to 0)
-(set: $incompetency to 0)
+(set: $competency to 0)
 (set: $professional to 0)
 (set: $humorous to 0)
 (set: $suckup to 0)
-(set: $honesty to 0)</tw-passagedata><tw-passagedata pid="3" name="Credits" tags="" position="554,323" size="100,100">##ABOUT
+(set: $honesty to 0)</tw-passagedata><tw-passagedata pid="3" name="Credits" tags="blankBackground credits" position="554,323" size="100,100">##ABOUT
 ###BIO
 In this riveting adventure, you, the protagonist have decided to subject yourself to the horrors of the infamous job interview. Why you have chosen to confront the dreaded hiring manager in his treacherous dungeon, deep in the bowels of datacorp’s castle, is your own business. Armed with nothing but your overpriced college degree and your stunning wit, you will brave senseless questions and undecipherable challenges. Once you have completed your interview, you will receive your sentence from the job market’s omnipotent court of faceless corporations. Interview quest is a game that attempts to poke fun at the conventions of the modern job search, and in doing so prompt players to reflect on the idiosyncrasies of the job market.
 
 ###CREDITS
 Created by: Andrew Dowdy, Ziyuan Cao, Suhyun Yun, Patrick Sliwinski, Zach Jacobson
 
-[[Title]] </tw-passagedata><tw-passagedata pid="4" name="Resume" tags="" position="365,480" size="100,100">=&gt;&lt;=
+[[Title]] </tw-passagedata><tw-passagedata pid="4" name="Resume" tags="blankBackground resume" position="365,480" size="100,100">=&gt;&lt;=
 (alert:&quot;Enter some information for your resume so job hunting can begin.&quot;)
 (set: $name to (prompt: &quot;Enter your name:&quot;, &quot;&quot;))&#39;&#39;$name&#39;&#39;
 (set: $college to (prompt: &quot;Enter the college you attended:&quot;, &quot;&quot;))ideal.applicant@gmail.com
@@ -81,31 +107,123 @@ Familar with not having a job
 &#39;&#39;Projects&#39;&#39;
 &lt;div style=&quot;float: left&quot;&gt;Some generic project that is not really relevant to the positions you are applying for&lt;/div&gt;&lt;div style=&quot;float: right&quot;&gt;//2018-2019//&lt;/div&gt;&lt;div style=&quot;clear: both;&quot;&gt;&lt;/div&gt;
 
-[[To the interview-&gt;InterviewIntro]]</tw-passagedata><tw-passagedata pid="5" name="InterviewIntro" tags="" position="428,608" size="100,100">Hello........................
+[[To the interview-&gt;InterviewIntro]]</tw-passagedata><tw-passagedata pid="5" name="InterviewIntro" tags="loadingBackground" position="428,608" size="100,100">
 
 
 
 
 
+=&gt;&lt;=
 
-[[Question 1-&gt;q1]]</tw-passagedata><tw-passagedata pid="6" name="q1" tags="" position="441,722" size="100,100">=&gt;&lt;=
-What is your favourite colour?
+[[Join Meeting-&gt;q1]]</tw-passagedata><tw-passagedata pid="6" name="q1" tags="interviewBackground question" position="441,722" size="100,100">=&gt;&lt;=
+####What is your favourite colour?
 
-[[Red-&gt;r11]]
-[[Blue, How about yourself?-&gt;r12]]
-[[I think that would depend on what you want to communicate and in what context. I’m glad you asked about colours as I, as it says on my resume, I’m qualified in the arts. One of the first things this allows me to do for your firm is..-&gt;r13]]
-[[My favourite colour would have to be green, because that’s what I’ll produce for your company-&gt;r14]]
-[[What bearing does this question have on my skills for this job, I mean seriously can you stop toying with me and ask me a real question-&gt;r15]]
-[[That’s a really interesting question, you ask great questions you know-&gt;r16]]</tw-passagedata><tw-passagedata pid="7" name="r11" tags="" position="72,932" size="100,100">I see .......... [[next question-&gt;q2]] I suppose
-(set: $professional to $professional + 1)</tw-passagedata><tw-passagedata pid="8" name="r12" tags="" position="185,948" size="100,100">Oh, um, I don&#39;t know, I&#39;m not sure how that&#39;s relevant really. [[Can we get back to the interview?-&gt;q2]] 
-(set: $professional to $professional + 1)</tw-passagedata><tw-passagedata pid="9" name="r13" tags="" position="293,949" size="100,100">Let&#39;s move on to the [[next question-&gt;q2]]
+&lt;==
+[[1-Red-&gt;r11]]
+
+[[2-Blue, How about yourself?-&gt;r12]]
+
+[[3-I think that would depend on what you want to communicate and in what context. I’m glad you asked about colours as I, as it says on my resume, I’m qualified in the arts. One of the first things this allows me to do for your firm is..-&gt;r13]]
+
+[[4-My favourite colour would have to be green, because that’s what I’ll produce for your company-&gt;r14]]
+
+[[5-What bearing does this question have on my skills for this job, I mean seriously can you stop toying with me and ask me a real question-&gt;r15]]
+
+[[6-That’s a really interesting question, you ask great questions you know-&gt;r16]]</tw-passagedata><tw-passagedata pid="7" name="r11" tags="interviewBackground" position="72,932" size="100,100">
+
+I see .......... [[next question-&gt;q2]] I suppose
+(set: $honest to $honest + 1)
+(set: $arrogance to $arrogance - 1)
+</tw-passagedata><tw-passagedata pid="8" name="r12" tags="interviewBackground" position="185,948" size="100,100">
+
+Oh, um, I don&#39;t know, I&#39;m not sure how that&#39;s relevant really. [[Can we get back to the interview?-&gt;q2]] 
+(set: $honest to $honest + 1)
+(set: $arrogance to $arrogance - 1)</tw-passagedata><tw-passagedata pid="9" name="r13" tags="interviewBackground" position="293,949" size="100,100">
+
+Let&#39;s move on to the [[next question-&gt;q2]]
 [*Continue talking*]&lt;loser|
 |cloaked)[Please lets just move on to the [[next question-&gt;q2]]]
 (click: ?loser)[(show: ?cloaked)(set: $professionalism to $professionalism -1)]
-(set: $arrogance to $arrogance + 1)</tw-passagedata><tw-passagedata pid="10" name="r14" tags="" position="427,957" size="100,100">[[next question-&gt;q2]]
-(set:$humorous to $humorous + 1)</tw-passagedata><tw-passagedata pid="11" name="r15" tags="" position="548,979" size="100,100">[[next question-&gt;q2]] 
-(set: $incompetency to $incompetency + 1)</tw-passagedata><tw-passagedata pid="12" name="r16" tags="" position="670,980" size="100,100">[[next question-&gt;q2]] 
-(set: $suckup to $suckup + 1)</tw-passagedata><tw-passagedata pid="13" name="q2" tags="" position="424,1215" size="100,100">Double-click this passage to edit it.</tw-passagedata></tw-storydata>
+(set: $honesty to $honesty -1)
+(set: $arrogance to $arrogance - 1)</tw-passagedata><tw-passagedata pid="10" name="r14" tags="interviewBackground" position="427,957" size="100,100">
+
+I see, well moving on
+[[next question-&gt;q2]]
+</tw-passagedata><tw-passagedata pid="11" name="r15" tags="interviewBackground" position="548,979" size="100,100">
+
+I suppose we can move on to the next question
+[[next question-&gt;q2]]
+(set: $honesty to $honesty + 1)
+(set: $professional to $professional - 1)</tw-passagedata><tw-passagedata pid="12" name="r16" tags="interviewBackground" position="670,980" size="100,100">
+
+Seeing as it’s such a good question, it would have been nice to get a real answer
+[[next question-&gt;q2]] 
+(set: $suckup to $suckup + 1)
+(set: $professional to $professional - 1)</tw-passagedata><tw-passagedata pid="13" name="q2" tags="interviewBackground question" position="424,1215" size="100,100">=&gt;&lt;=
+####What would you say is your biggest flaw?
+
+&lt;==
+[[1-I’d probably have to say my biggest flaw...is perfectionism. I just can’t help but deliver perfect results, and you know that’s sometimes an issue because it makes other people feel bad. What can I say I guess I just can’t help but be this perfect.-&gt;r21]]
+
+[[2-My biggest flaw is probably that I don’t know when to stop working. I’m just always working trying to improve what I’m producing. It’s a flaw because not everyone else can keep up.-&gt;r22]]
+
+[[3-Why are you asking me about my flaws. This is such a non-question. No one’s going to answer an actual flaw, like am I about to tell you I steal from the poor and kill babies? Please can you cut the crap and ask me about my resume and qualifications.-&gt;r23]]
+
+[[4-Do you know that’s a really great question to ask, because I think its important for us to be honest about our flaws. By the way that is a delightful haircut, where did you get that-&gt;r24]]
+
+[[5-Flaws, I have so many flaws, why am I even applying for this job I’m not going to get it aaaahhhhh-&gt;r25]]</tw-passagedata><tw-passagedata pid="14" name="r21" tags="interviewBackground" position="266,1356" size="100,100">
+
+I see, well I suppose that&#39;s understandable.
+[[Next question-&gt;q3]]
+(set: $arrogance to $arrogance + 1)
+(set: $honesty to $honesty - 1)</tw-passagedata><tw-passagedata pid="15" name="r22" tags="interviewBackground" position="377,1356" size="100,100">
+
+Hmm, well that’s certainly encouraging to hear.
+[[Next question-&gt;q3]]
+(set: $arrogance to $arrogance + 1)
+(set: $honesty to $honesty - 1)
+(set: $competency to $competency + 1)</tw-passagedata><tw-passagedata pid="16" name="q3" tags="question interviewBackground" position="470,1511" size="100,100">
+=&gt;&lt;=
+####We see here on your resume that you graduated about six months ago. What have you been working on in that time?
+
+&lt;==
+[[1-Well see there’s been the international pandemic thing that you might have heard of. Yeah I have a blank resume for the past six months because of that.-&gt;q31]]
+
+[[2-I’ve been coordinating finances and engaging in skill building, particularly in the domestic sciences.-&gt;q32]]
+
+[[3-I’ve been honing my CS skills and trying to build on what I learned in my degree, in fact I’d be interested in showing you some of those skills.-&gt;q33]]
+</tw-passagedata><tw-passagedata pid="17" name="r23" tags="interviewBackground" position="490,1355" size="100,100">
+
+Um, I suppose we can
+[[Next question-&gt;q3]]
+(set: $professional to $professional - 1)
+(set: $honesty to $honesty + 1)</tw-passagedata><tw-passagedata pid="18" name="r24" tags="interviewBackground" position="608,1354" size="100,100">
+
+Yes this really is a brilliant haircut isn’t it. I mean not to brag but I’ve always had immaculate hair. I cut it myself you know...yes I know impressive. 
+[[Next question-&gt;q3]]
+(set: $suckup to $suckup + 1)</tw-passagedata><tw-passagedata pid="19" name="r25" tags="interviewBackground" position="721,1351" size="100,100">
+
+It’s ok, everyone gets nervous in an interview, it’s ok calm down. Option to double down or calm down?
+[[No really, I don&#39;t deserve this job-&gt;rejectedEarly]]
+[[Next question-&gt;q3]]
+(set: $honest to $honest + 1)
+(set: $professional to $professional - 1)</tw-passagedata><tw-passagedata pid="20" name="rejectedEarly" tags="" position="721,1501" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="21" name="q31" tags="interviewBackground" position="320,1661" size="100,100">
+
+I see, well I suppose that&#39;s understandable.
+[[Finish the interview-&gt;closing]]
+(set: $humor to $humor + 1)
+(set: $honesty to $honesty + 1)
+(set: $professional to $professional -1)
+(set: $competency to $competency -1)</tw-passagedata><tw-passagedata pid="22" name="q32" tags="interviewBackground" position="470,1661" size="100,100">
+
+Interesting… very interesting, alright then
+[[Finish the interview-&gt;closing]]
+(set: $professional to $professional + 1)</tw-passagedata><tw-passagedata pid="23" name="q33" tags="interviewBackground" position="620,1661" size="100,100">
+
+That won’t be necessary thank you, but we’re glad to hear you’ve been productive over the past few months. 
+[[Finish the interview-&gt;closing]]
+(set: $professional to $professional + 1)
+(set: $competency to $competency + 1)</tw-passagedata><tw-passagedata pid="24" name="closing" tags="" position="461,1803" size="100,100">Double-click this passage to edit it.</tw-passagedata></tw-storydata>
 
 <script title="Twine engine code" data-main="harlowe">"use strict";function _defineProperty(e,t,n){return t in e?Object.defineProperty(e,t,{value:n,enumerable:!0,configurable:!0,writable:!0}):e[t]=n,e}function _toConsumableArray(e){if(Array.isArray(e)){for(var t=0,n=Array(e.length);t<e.length;t++)n[t]=e[t];return n}return Array.from(e)}var _slicedToArray=function(){function e(e,t){var n=[],r=!0,i=!1,o=void 0;try{for(var a,s=e[Symbol.iterator]();!(r=(a=s.next()).done)&&(n.push(a.value),!t||n.length!==t);r=!0);}catch(e){i=!0,o=e}finally{try{!r&&s.return&&s.return()}finally{if(i)throw o}}return n}return function(t,n){if(Array.isArray(t))return t;if(Symbol.iterator in Object(t))return e(t,n);throw new TypeError("Invalid attempt to destructure non-iterable instance")}}(),_typeof="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e};!function(){/**
  * @license almond 0.3.3 Copyright jQuery Foundation and other contributors.
