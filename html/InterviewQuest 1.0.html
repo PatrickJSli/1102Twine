@@ -15,6 +15,7 @@
 tw-story {
   font-family: 'Space Grotesk', sans-serif; 
   background-color: #c0c0c0;
+  padding: 5% 20%;
 }
 tw-sidebar tw-icon.redo {
 	display: none;
@@ -68,7 +69,7 @@ tw-story[tags~="interviewBackground"] {
   	background-attachment: fixed;
   	background-size: 90% 90%;
   	background-position: center;
-}</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Title" tags="titleScreen blankBackground" position="399,170" size="100,100">Welcome to
+}</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Title" tags="titleScreen blankBackground" position="399,169" size="100,100">Welcome to
 #InterviewQuest
 [[Play]]
 (link: &quot;Quit&quot;)[&lt;script&gt;window.close()&lt;/script&gt;]
@@ -79,7 +80,13 @@ tw-story[tags~="interviewBackground"] {
 (set: $professional to 0)
 (set: $humorous to 0)
 (set: $suckup to 0)
-(set: $honesty to 0)</tw-passagedata><tw-passagedata pid="3" name="Credits" tags="blankBackground credits" position="554,323" size="100,100">##ABOUT
+(set: $honesty to 0)
+&lt;script&gt;
+var audio= document.createElement(&#39;audio&#39;);
+audio.src=&#39;https://github.com/PatrickJSli/1102Twine/blob/main/audio/office.mp3?raw=true&#39;;
+audio.loop = true;
+audio.play();
+&lt;/script&gt;</tw-passagedata><tw-passagedata pid="3" name="Credits" tags="blankBackground credits" position="632,267" size="100,100">##ABOUT
 ###BIO
 In this riveting adventure, you, the protagonist have decided to subject yourself to the horrors of the infamous job interview. Why you have chosen to confront the dreaded hiring manager in his treacherous dungeon, deep in the bowels of datacorp’s castle, is your own business. Armed with nothing but your overpriced college degree and your stunning wit, you will brave senseless questions and undecipherable challenges. Once you have completed your interview, you will receive your sentence from the job market’s omnipotent court of faceless corporations. Interview quest is a game that attempts to poke fun at the conventions of the modern job search, and in doing so prompt players to reflect on the idiosyncrasies of the job market.
 
@@ -115,7 +122,7 @@ Familar with not having a job
 
 =&gt;&lt;=
 
-[[Join Meeting-&gt;q1]]</tw-passagedata><tw-passagedata pid="6" name="q1" tags="interviewBackground question" position="441,722" size="100,100">=&gt;&lt;=
+[[Join Meeting-&gt;q1]]</tw-passagedata><tw-passagedata pid="6" name="q1" tags="interviewBackground question" position="441,721" size="100,100">=&gt;&lt;=
 ####What is your favourite colour?
 
 &lt;==
@@ -129,7 +136,8 @@ Familar with not having a job
 
 [[5-What bearing does this question have on my skills for this job, I mean seriously can you stop toying with me and ask me a real question-&gt;r15]]
 
-[[6-That’s a really interesting question, you ask great questions you know-&gt;r16]]</tw-passagedata><tw-passagedata pid="7" name="r11" tags="interviewBackground" position="72,932" size="100,100">
+[[6-That’s a really interesting question, you ask great questions you know-&gt;r16]]
+&lt;audio src=&quot;https://github.com/PatrickJSli/1102Twine/blob/main/audio/heartbeat.mp3?raw=true&quot; autoplay&gt;</tw-passagedata><tw-passagedata pid="7" name="r11" tags="interviewBackground" position="72,932" size="100,100">
 
 I see .......... [[next question-&gt;q2]] I suppose
 (set: $honest to $honest + 1)
@@ -145,7 +153,7 @@ Let&#39;s move on to the [[next question-&gt;q2]]
 |cloaked)[Please lets just move on to the [[next question-&gt;q2]]]
 (click: ?loser)[(show: ?cloaked)(set: $professionalism to $professionalism -1)]
 (set: $honesty to $honesty -1)
-(set: $arrogance to $arrogance - 1)</tw-passagedata><tw-passagedata pid="10" name="r14" tags="interviewBackground" position="427,957" size="100,100">
+(set: $arrogance to $arrogance + 1)</tw-passagedata><tw-passagedata pid="10" name="r14" tags="interviewBackground" position="427,957" size="100,100">
 
 I see, well moving on
 [[next question-&gt;q2]]
@@ -171,7 +179,8 @@ Seeing as it’s such a good question, it would have been nice to get a real ans
 
 [[4-Do you know that’s a really great question to ask, because I think its important for us to be honest about our flaws. By the way that is a delightful haircut, where did you get that-&gt;r24]]
 
-[[5-Flaws, I have so many flaws, why am I even applying for this job I’m not going to get it aaaahhhhh-&gt;r25]]</tw-passagedata><tw-passagedata pid="14" name="r21" tags="interviewBackground" position="266,1356" size="100,100">
+[[5-Flaws, I have so many flaws, why am I even applying for this job I’m not going to get it aaaahhhhh-&gt;r25]]
+&lt;audio src=&quot;https://github.com/PatrickJSli/1102Twine/blob/main/audio/heartbeat.mp3?raw=true&quot; autoplay&gt;</tw-passagedata><tw-passagedata pid="14" name="r21" tags="interviewBackground" position="266,1356" size="100,100">
 
 I see, well I suppose that&#39;s understandable.
 [[Next question-&gt;q3]]
@@ -182,8 +191,7 @@ Hmm, well that’s certainly encouraging to hear.
 [[Next question-&gt;q3]]
 (set: $arrogance to $arrogance + 1)
 (set: $honesty to $honesty - 1)
-(set: $competency to $competency + 1)</tw-passagedata><tw-passagedata pid="16" name="q3" tags="question interviewBackground" position="470,1511" size="100,100">
-=&gt;&lt;=
+(set: $competency to $competency + 1)</tw-passagedata><tw-passagedata pid="16" name="q3" tags="question interviewBackground" position="470,1511" size="100,100">=&gt;&lt;=
 ####We see here on your resume that you graduated about six months ago. What have you been working on in that time?
 
 &lt;==
@@ -192,7 +200,7 @@ Hmm, well that’s certainly encouraging to hear.
 [[2-I’ve been coordinating finances and engaging in skill building, particularly in the domestic sciences.-&gt;q32]]
 
 [[3-I’ve been honing my CS skills and trying to build on what I learned in my degree, in fact I’d be interested in showing you some of those skills.-&gt;q33]]
-</tw-passagedata><tw-passagedata pid="17" name="r23" tags="interviewBackground" position="490,1355" size="100,100">
+&lt;audio src=&quot;https://github.com/PatrickJSli/1102Twine/blob/main/audio/heartbeat.mp3?raw=true&quot; autoplay&gt;</tw-passagedata><tw-passagedata pid="17" name="r23" tags="interviewBackground" position="490,1355" size="100,100">
 
 Um, I suppose we can
 [[Next question-&gt;q3]]
@@ -207,7 +215,9 @@ It’s ok, everyone gets nervous in an interview, it’s ok calm down. Option to
 [[No really, I don&#39;t deserve this job-&gt;rejectedEarly]]
 [[Next question-&gt;q3]]
 (set: $honest to $honest + 1)
-(set: $professional to $professional - 1)</tw-passagedata><tw-passagedata pid="20" name="rejectedEarly" tags="" position="721,1501" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="21" name="q31" tags="interviewBackground" position="320,1661" size="100,100">
+(set: $professional to $professional - 1)</tw-passagedata><tw-passagedata pid="20" name="rejectedEarly" tags="interviewBackground" position="879,1491" size="100,100">Thank you for your time, but I dont think that you are right for this position.  Please work on your interview skills for next time because that was a hot mess.
+[[Title]]
+(link: &quot;Quit&quot;)[&lt;script&gt;window.close()&lt;/script&gt;]</tw-passagedata><tw-passagedata pid="21" name="q31" tags="interviewBackground" position="320,1661" size="100,100">
 
 I see, well I suppose that&#39;s understandable.
 [[Finish the interview-&gt;closing]]
@@ -223,7 +233,13 @@ Interesting… very interesting, alright then
 That won’t be necessary thank you, but we’re glad to hear you’ve been productive over the past few months. 
 [[Finish the interview-&gt;closing]]
 (set: $professional to $professional + 1)
-(set: $competency to $competency + 1)</tw-passagedata><tw-passagedata pid="24" name="closing" tags="" position="461,1803" size="100,100">Double-click this passage to edit it.</tw-passagedata></tw-storydata>
+(set: $competency to $competency + 1)</tw-passagedata><tw-passagedata pid="24" name="closing" tags="interviewBackground" position="500,1884" size="100,100">=&gt;&lt;=
+(if: ($honesty &gt; 1) and ($professional &gt; 1) and ($competency &gt; 0))[Well we think that you did a great job here, and we are willing to give you the job!  We will contact you with the next steps for your offer.]
+(elseif: ($arrogance&gt;1))[Thank you for your time, but we don&#39;t think that you are the right candidate for the job.  Goodluck with your job hunt.]
+(else:)[You&#39;ve given us a lot to think about.  We will be contacting you soon with our decision.  Thank you for your time.]
+[[Title]]
+(link: &quot;Quit&quot;)[&lt;script&gt;window.close()&lt;/script&gt;]
+&lt;audio src=&quot;https://github.com/PatrickJSli/1102Twine/blob/main/audio/heartbeat.mp3&quot; autoplay&gt;</tw-passagedata></tw-storydata>
 
 <script title="Twine engine code" data-main="harlowe">"use strict";function _defineProperty(e,t,n){return t in e?Object.defineProperty(e,t,{value:n,enumerable:!0,configurable:!0,writable:!0}):e[t]=n,e}function _toConsumableArray(e){if(Array.isArray(e)){for(var t=0,n=Array(e.length);t<e.length;t++)n[t]=e[t];return n}return Array.from(e)}var _slicedToArray=function(){function e(e,t){var n=[],r=!0,i=!1,o=void 0;try{for(var a,s=e[Symbol.iterator]();!(r=(a=s.next()).done)&&(n.push(a.value),!t||n.length!==t);r=!0);}catch(e){i=!0,o=e}finally{try{!r&&s.return&&s.return()}finally{if(i)throw o}}return n}return function(t,n){if(Array.isArray(t))return t;if(Symbol.iterator in Object(t))return e(t,n);throw new TypeError("Invalid attempt to destructure non-iterable instance")}}(),_typeof="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e};!function(){/**
  * @license almond 0.3.3 Copyright jQuery Foundation and other contributors.
