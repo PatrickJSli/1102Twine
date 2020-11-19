@@ -217,18 +217,18 @@ It’s ok, everyone gets nervous in an interview, it’s ok calm down. Option to
 (link: &quot;Quit&quot;)[&lt;script&gt;window.close()&lt;/script&gt;]</tw-passagedata><tw-passagedata pid="21" name="q31" tags="interviewBackground" position="320,1661" size="100,100">
 
 I see, well I suppose that&#39;s understandable.
-[[Finish the interview-&gt;closing]]
+[[Next-&gt;q4]]
 (set: $humor to $humor + 1)
 (set: $honesty to $honesty + 1)
 (set: $professional to $professional -1)
 (set: $competency to $competency -1)</tw-passagedata><tw-passagedata pid="22" name="q32" tags="interviewBackground" position="470,1661" size="100,100">
 
 Interesting… very interesting, alright then
-[[Finish the interview-&gt;closing]]
+[[Next-&gt;q4]]
 (set: $professional to $professional + 1)</tw-passagedata><tw-passagedata pid="23" name="q33" tags="interviewBackground" position="620,1661" size="100,100">
 
 That won’t be necessary thank you, but we’re glad to hear you’ve been productive over the past few months. 
-[[Finish the interview-&gt;closing]]
+[[Next-&gt;q4]]
 (set: $professional to $professional + 1)
 (set: $competency to $competency + 1)</tw-passagedata><tw-passagedata pid="24" name="closing" tags="interviewBackground" position="644,1983" size="100,100">=&gt;&lt;=
 (if: ($honesty &gt; 1) and ($professional &gt; 1) and ($competency &gt; 0))[Well we think that you did a great job here, and we are willing to give you the job!  We will contact you with the next steps for your offer.]
@@ -245,7 +245,38 @@ That won’t be necessary thank you, but we’re glad to hear you’ve been prod
 |email&gt;[]
 |phone&gt;[]
 |retry&gt;[]
-|wait&gt;[]</tw-passagedata></tw-storydata>
+|wait&gt;[]</tw-passagedata><tw-passagedata pid="27" name="q4" tags="question interviewBackground" position="456,1822" size="100,100">=&gt;&lt;=
+####Lets move on to the practical questions. We want to see how you’ll perform in the role, and also get an idea of you broad problem solving skills.
+
+&lt;==
+[[1-Alright then I guess-&gt;q5]]
+[[2-Yes, I&#39;d appreciate that-&gt;q5]]
+[[3-It&#39;s a shame, I was enjoying our conversation-&gt;q5]]
+[[4-Yes, let&#39;s get past the trivialities-&gt;q5]]
+</tw-passagedata><tw-passagedata pid="28" name="q5" tags="question interviewBackground" position="456,1972" size="100,100">=&gt;&lt;=
+### Alright, we’re first going to text your critical thinking and problem solving skills using a short riddle. In this problem we’d like you to evaluate the statement “This statement is false”.
+
+&lt;==
+[[1-The statement has no real meaning. There is no point analyzing it because it&#39;s just a useless question of grammar and semantics.-&gt;r51]]
+[[2-It&#39;s a paradoxical statement. If the statement is false, then saying &quot;this statement is false&quot; is true, which is contradictory. If the statement is true, then it must be false, which is also contradictory.-&gt;r52]] 
+[[3-Here I thought you were going to have me do a CS problem, but no your asking me a riddle, a riddle which is actually a philosophical paradox. Could we please please please please move on to the part of the interview that makes sense.-&gt;r53]]
+[[4-You know that’s a genius question, I would have never thought of it.-&gt;r54]]
+[[5-This statement is false, what’s to evaluate. Seems pretty straightforward to me.-&gt;r55]]</tw-passagedata><tw-passagedata pid="29" name="r51" tags="interviewBackground" position="156,2122" size="100,100">
+
+At our company, we value critical thinking. The point of this task is not to be a useful statement, but to be a thought exercise.
+[[Continue-&gt;q6]]</tw-passagedata><tw-passagedata pid="30" name="r52" tags="interviewBackground" position="306,2122" size="100,100">
+
+Good answer. At our company, we value critical thinking, and it seems you have that.
+[[Continue-&gt;q6]]</tw-passagedata><tw-passagedata pid="31" name="r53" tags="interviewBackground" position="456,2122" size="100,100">
+
+At our company, we value critical thinking. That includes thinking about topics not just related to CS.
+[[Continue-&gt;q6]]</tw-passagedata><tw-passagedata pid="32" name="r54" tags="interviewBackground" position="606,2122" size="100,100">
+
+Glad you think so. How about answering it?
+[[Try again-&gt;q5]]</tw-passagedata><tw-passagedata pid="33" name="r55" tags="interviewBackground" position="756,2122" size="100,100">
+
+I see
+[[Continue-&gt;q6]]</tw-passagedata><tw-passagedata pid="34" name="q6" tags="" position="471,2278" size="100,100">Double-click this passage to edit it.</tw-passagedata></tw-storydata>
 
 <script title="Twine engine code" data-main="harlowe">"use strict";function _defineProperty(e,t,n){return t in e?Object.defineProperty(e,t,{value:n,enumerable:!0,configurable:!0,writable:!0}):e[t]=n,e}function _toConsumableArray(e){if(Array.isArray(e)){for(var t=0,n=Array(e.length);t<e.length;t++)n[t]=e[t];return n}return Array.from(e)}var _slicedToArray=function(){function e(e,t){var n=[],r=!0,i=!1,o=void 0;try{for(var a,s=e[Symbol.iterator]();!(r=(a=s.next()).done)&&(n.push(a.value),!t||n.length!==t);r=!0);}catch(e){i=!0,o=e}finally{try{!r&&s.return&&s.return()}finally{if(i)throw o}}return n}return function(t,n){if(Array.isArray(t))return t;if(Symbol.iterator in Object(t))return e(t,n);throw new TypeError("Invalid attempt to destructure non-iterable instance")}}(),_typeof="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e};!function(){/**
  * @license almond 0.3.3 Copyright jQuery Foundation and other contributors.
