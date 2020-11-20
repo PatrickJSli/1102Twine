@@ -141,34 +141,29 @@ Familar with not having a job
 &lt;audio src=&quot;https://github.com/PatrickJSli/1102Twine/blob/main/audio/heartbeat.mp3?raw=true&quot; autoplay&gt;</tw-passagedata><tw-passagedata pid="7" name="r11" tags="interviewBackground" position="119,1209" size="100,100">
 
 I see .......... [[next question-&gt;q2]] I suppose
-(set: $honest to $honest + 1)
-(set: $arrogance to $arrogance - 1)
+(set: $points to $points + 1)
 </tw-passagedata><tw-passagedata pid="8" name="r12" tags="interviewBackground" position="232,1225" size="100,100">
 
 Oh, um, I don&#39;t know, I&#39;m not sure how that&#39;s relevant really. [[Can we get back to the interview?-&gt;q2]] 
-(set: $honest to $honest + 1)
-(set: $arrogance to $arrogance - 1)</tw-passagedata><tw-passagedata pid="9" name="r13" tags="interviewBackground" position="339,1224" size="100,100">
+(set: $points to $points + 1)</tw-passagedata><tw-passagedata pid="9" name="r13" tags="interviewBackground" position="339,1224" size="100,100">
 
 Let&#39;s move on to the [[next question-&gt;q2]]
 [*Continue talking*]&lt;loser|
 |cloaked)[Please lets just move on to the [[next question-&gt;q2]]]
 (click: ?loser)[(show: ?cloaked)(set: $professionalism to $professionalism -1)]
-(set: $honesty to $honesty -1)
-(set: $arrogance to $arrogance + 1)</tw-passagedata><tw-passagedata pid="10" name="r14" tags="interviewBackground" position="473,1232" size="100,100">
+(set: $points to $points - 3)</tw-passagedata><tw-passagedata pid="10" name="r14" tags="interviewBackground" position="473,1232" size="100,100">
 
 I see, well moving on
 [[next question-&gt;q2]]
-</tw-passagedata><tw-passagedata pid="11" name="r15" tags="interviewBackground" position="593,1254" size="100,100">
+(set: $points to $points + 1)</tw-passagedata><tw-passagedata pid="11" name="r15" tags="interviewBackground" position="593,1254" size="100,100">
 
 I suppose we can move on to the next question
 [[next question-&gt;q2]]
-(set: $honesty to $honesty + 1)
-(set: $professional to $professional - 1)</tw-passagedata><tw-passagedata pid="12" name="r16" tags="interviewBackground" position="715,1255" size="100,100">
+(set: $points to $points - 1)</tw-passagedata><tw-passagedata pid="12" name="r16" tags="interviewBackground" position="715,1255" size="100,100">
 
 Seeing as it’s such a good question, it would have been nice to get a real answer
 [[next question-&gt;q2]] 
-(set: $suckup to $suckup + 1)
-(set: $professional to $professional - 1)</tw-passagedata><tw-passagedata pid="13" name="q2" tags="interviewBackground question" position="469,1490" size="100,100">=&gt;&lt;=
+(set: $points to $points - 1)</tw-passagedata><tw-passagedata pid="13" name="q2" tags="interviewBackground question" position="469,1490" size="100,100">=&gt;&lt;=
 ####What would you say is your biggest flaw?
 
 &lt;==
@@ -185,14 +180,11 @@ Seeing as it’s such a good question, it would have been nice to get a real ans
 
 I see, well I suppose that&#39;s understandable.
 [[Next question-&gt;q3]]
-(set: $arrogance to $arrogance + 1)
-(set: $honesty to $honesty - 1)</tw-passagedata><tw-passagedata pid="15" name="r22" tags="interviewBackground" position="422,1631" size="100,100">
+(set: $points to $points + 1)</tw-passagedata><tw-passagedata pid="15" name="r22" tags="interviewBackground" position="422,1631" size="100,100">
 
 Hmm, well that’s certainly encouraging to hear.
 [[Next question-&gt;q3]]
-(set: $arrogance to $arrogance + 1)
-(set: $honesty to $honesty - 1)
-(set: $competency to $competency + 1)</tw-passagedata><tw-passagedata pid="16" name="q3" tags="question interviewBackground" position="515,1786" size="100,100">=&gt;&lt;=
+(set: $points to $points + 2)</tw-passagedata><tw-passagedata pid="16" name="q3" tags="question interviewBackground" position="515,1786" size="100,100">=&gt;&lt;=
 ####We see here on your resume that you graduated about six months ago. What have you been working on in that time?
 
 &lt;==
@@ -205,36 +197,30 @@ Hmm, well that’s certainly encouraging to hear.
 
 Um, I suppose we can
 [[Next question-&gt;q3]]
-(set: $professional to $professional - 1)
-(set: $honesty to $honesty + 1)</tw-passagedata><tw-passagedata pid="18" name="r24" tags="interviewBackground" position="653,1629" size="100,100">
+(set: $points to $points - 2)</tw-passagedata><tw-passagedata pid="18" name="r24" tags="interviewBackground" position="653,1629" size="100,100">
 
 Yes this really is a brilliant haircut isn’t it. I mean not to brag but I’ve always had immaculate hair. I cut it myself you know...yes I know impressive. 
 [[Next question-&gt;q3]]
-(set: $suckup to $suckup + 1)</tw-passagedata><tw-passagedata pid="19" name="r25" tags="interviewBackground" position="766,1626" size="100,100">
+(set: $points to $points + 1)</tw-passagedata><tw-passagedata pid="19" name="r25" tags="interviewBackground" position="766,1626" size="100,100">
 
 It’s ok, everyone gets nervous in an interview, it’s ok calm down. Option to double down or calm down?
 [[No really, I don&#39;t deserve this job-&gt;rejectedEarly]]
 [[Next question-&gt;q3]]
-(set: $honest to $honest + 1)
-(set: $professional to $professional - 1)</tw-passagedata><tw-passagedata pid="20" name="rejectedEarly" tags="interviewBackground" position="754,1816" size="100,100">Thank you for your time, but I don&#39;t think that you are right for this position.  Please work on your interview skills for next time because that was a hot mess.
+(set: $points to $points - 3)</tw-passagedata><tw-passagedata pid="20" name="rejectedEarly" tags="interviewBackground" position="754,1816" size="100,100">Thank you for your time, but I don&#39;t think that you are right for this position.  Please work on your interview skills for next time because that was a hot mess.
 [[Title]]
 (link: &quot;Quit&quot;)[&lt;script&gt;window.close()&lt;/script&gt;]</tw-passagedata><tw-passagedata pid="21" name="q31" tags="interviewBackground" position="364,1936" size="100,100">
 
 I see, well I suppose that&#39;s understandable.
 [[Next-&gt;q4]]
-(set: $humor to $humor + 1)
-(set: $honesty to $honesty + 1)
-(set: $professional to $professional -1)
-(set: $competency to $competency -1)</tw-passagedata><tw-passagedata pid="22" name="q32" tags="interviewBackground" position="514,1936" size="100,100">
+(set: $points to $points - 1)</tw-passagedata><tw-passagedata pid="22" name="q32" tags="interviewBackground" position="514,1936" size="100,100">
 
 Interesting… very interesting, alright then
 [[Next-&gt;q4]]
-(set: $professional to $professional + 1)</tw-passagedata><tw-passagedata pid="23" name="q33" tags="interviewBackground" position="664,1937" size="100,100">
+(set: $points to $points + 1)</tw-passagedata><tw-passagedata pid="23" name="q33" tags="interviewBackground" position="664,1937" size="100,100">
 
 That won’t be necessary thank you, but we’re glad to hear you’ve been productive over the past few months. 
 [[Next-&gt;q4]]
-(set: $professional to $professional + 1)
-(set: $competency to $competency + 1)</tw-passagedata><tw-passagedata pid="24" name="closing" tags="interviewBackground" position="688,2259" size="100,100">=&gt;&lt;=
+(set: $points to $points + 3)</tw-passagedata><tw-passagedata pid="24" name="closing" tags="interviewBackground" position="688,2259" size="100,100">=&gt;&lt;=
 (if: ($honesty &gt; 1) and ($professional &gt; 1) and ($competency &gt; 0))[Well we think that you did a great job here, and we are willing to give you the job!  We will contact you with the next steps for your offer.]
 (elseif: ($arrogance&gt;1))[Thank you for your time, but we don&#39;t think that you are the right candidate for the job.  Goodluck with your job hunt.]
 (else:)[You&#39;ve given us a lot to think about.  We will be contacting you soon with our decision.  Thank you for your time.]
@@ -272,19 +258,24 @@ That won’t be necessary thank you, but we’re glad to hear you’ve been prod
 [[5-This statement is false, what’s to evaluate. Seems pretty straightforward to me.-&gt;r55]]</tw-passagedata><tw-passagedata pid="29" name="r51" tags="interviewBackground" position="200,2398" size="100,100">
 
 At our company, we value critical thinking. The point of this task is not to be a useful statement, but to be a thought exercise.
-[[Continue-&gt;q6]]</tw-passagedata><tw-passagedata pid="30" name="r52" tags="interviewBackground" position="350,2399" size="100,100">
+[[Continue-&gt;q6]]
+(set: $points to $points + 1)</tw-passagedata><tw-passagedata pid="30" name="r52" tags="interviewBackground" position="350,2399" size="100,100">
 
 Good answer. At our company, we value critical thinking, and it seems you have that.
-[[Continue-&gt;q6]]</tw-passagedata><tw-passagedata pid="31" name="r53" tags="interviewBackground" position="500,2399" size="100,100">
+[[Continue-&gt;q6]]
+(set: $points to $points + 3)</tw-passagedata><tw-passagedata pid="31" name="r53" tags="interviewBackground" position="500,2399" size="100,100">
 
 At our company, we value critical thinking. That includes thinking about topics not just related to CS.
-[[Continue-&gt;q6]]</tw-passagedata><tw-passagedata pid="32" name="r54" tags="interviewBackground" position="650,2399" size="100,100">
+[[Continue-&gt;q6]]
+(set: $points to $points - 1)</tw-passagedata><tw-passagedata pid="32" name="r54" tags="interviewBackground" position="650,2399" size="100,100">
 
 Glad you think so. How about answering it?
-[[Try again-&gt;q5]]</tw-passagedata><tw-passagedata pid="33" name="r55" tags="interviewBackground" position="800,2399" size="100,100">
+[[Try again-&gt;q5]]
+(set: $points to $points - 2)</tw-passagedata><tw-passagedata pid="33" name="r55" tags="interviewBackground" position="800,2399" size="100,100">
 
 I see
-[[Continue-&gt;q6]]</tw-passagedata><tw-passagedata pid="34" name="q6" tags="question interviewBackground" position="515,2555" size="100,100">=&gt;&lt;=
+[[Continue-&gt;q6]]
+(set: $points to $points - 1)</tw-passagedata><tw-passagedata pid="34" name="q6" tags="question interviewBackground" position="515,2555" size="100,100">=&gt;&lt;=
 ####Just as the interviewers start explaining their next problem for you to address, you get a knock on the door. The gas company said they’d be coming today to install a new pay as you go meter because you haven&#39;t been paying the gas bill on time. If you don’t answer the door and help them install it they’ll cut off your gas, and winter is coming. What do you do?
 
 &lt;==
@@ -294,16 +285,19 @@ I see
 [[4-Lie and say you wifi router is cutting in and out and you need to go fix it.-&gt;r64]]</tw-passagedata><tw-passagedata pid="35" name="r61" tags="interviewBackground" position="290,2705" size="100,100">
 
 Yes, these are crazy times.
-[[Continue-&gt;q7]]</tw-passagedata><tw-passagedata pid="36" name="r62" tags="interviewBackground" position="440,2705" size="100,100">
+[[Continue-&gt;q7]]
+(set: $points to $points + 1)</tw-passagedata><tw-passagedata pid="36" name="r62" tags="interviewBackground" position="440,2705" size="100,100">
 
 Now that you are back, let&#39;s resume.
-[[Continue-&gt;q7]]</tw-passagedata><tw-passagedata pid="37" name="r63" tags="interviewBackground" position="590,2705" size="100,100">
+[[Continue-&gt;q7]]
+(set: $points to $points + 1)</tw-passagedata><tw-passagedata pid="37" name="r63" tags="interviewBackground" position="590,2705" size="100,100">
 
-It is pretty disrespectful to leave in the middle of an interview with no justification. If you don&#39;t have time for us, we don&#39;t have time for you. [[Goodbye]]</tw-passagedata><tw-passagedata pid="38" name="r64" tags="" position="740,2705" size="100,100">
+It is pretty disrespectful to leave in the middle of an interview with no justification. If you don&#39;t have time for us, we don&#39;t have time for you. [[Goodbye]]
+(set: $points to $points - 3)</tw-passagedata><tw-passagedata pid="38" name="r64" tags="" position="740,2705" size="100,100">
 
 I certainly hope you won&#39;t be having &quot;wifi issues&quot; in the future given much of your work would be remote if you got this position.
 [[Continue-&gt;q7]]
-</tw-passagedata><tw-passagedata pid="39" name="q7" tags="question interviewBackground" position="290,2855" size="100,100">=&gt;&lt;=
+(set: $points to $points - 1)</tw-passagedata><tw-passagedata pid="39" name="q7" tags="question interviewBackground" position="290,2855" size="100,100">=&gt;&lt;=
 ####Next the interviewers give you a set of CS problems in a language you havn’t used since Sophmore year, and start a clock ticking. For all your anxiety about answering questions that college didn’t prepare you for, it would appear the CS problems will be even more challenging. You can hear the clock ticking as you stare blankly at the first question. Indeed, your interviewers can see that you haven&#39;t written a line. What do you do?
 
 &lt;==
@@ -313,28 +307,38 @@ I certainly hope you won&#39;t be having &quot;wifi issues&quot; in the future g
 </tw-passagedata><tw-passagedata pid="40" name="Goodbye" tags="" position="590,2855" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="41" name="r71" tags="interviewBackground" position="140,3005" size="100,100">
 
 Not too bad. It&#39;s a pretty difficult problem.
-[[Continue-&gt;endInterview]]</tw-passagedata><tw-passagedata pid="42" name="r72" tags="interviewBackground" position="290,3005" size="100,100">
+[[Continue-&gt;endInterview]]
+(set: $points to $points + 1)</tw-passagedata><tw-passagedata pid="42" name="r72" tags="interviewBackground" position="290,3005" size="100,100">
 
 We like to see applicants that can solve problems on their own, but looking things up is always an option.
-[[Continue-&gt;endInterview]] </tw-passagedata><tw-passagedata pid="43" name="r73" tags="interviewBackground" position="440,3005" size="100,100">
+[[Continue-&gt;endInterview]] 
+(set: $points to $points + 3)</tw-passagedata><tw-passagedata pid="43" name="r73" tags="interviewBackground" position="440,3005" size="100,100">
 
 No, this is the language you will need for the position.
-[[Continue-&gt;endInterview]]</tw-passagedata><tw-passagedata pid="44" name="endInterview" tags="interviewBackground" position="291,3177" size="100,100">
+[[Continue-&gt;endInterview]]
+(set: $points to $points - 1)</tw-passagedata><tw-passagedata pid="44" name="endInterview" tags="interviewBackground" position="291,3177" size="100,100">
 
 That is all we have time for right now. Thank you for applying. You will be contacted soon if you are selected for the position.
 [[End Interview-&gt;wait]]
 </tw-passagedata><tw-passagedata pid="45" name="wait" tags="blankBackground" position="291,3327" size="100,100">make it so you have to keep clicking wait multiple times before moving on
 [[wait-&gt;call]]</tw-passagedata><tw-passagedata pid="46" name="call" tags="blankBackground" position="291,3477" size="100,100">You wait a couple weeks, and your finances keep getting tighter and tighter. Every time the phone rings you jump out of your shoes to answer it. One particularly cold morning the phone rings
 Final version will automatically selection decision
+
+(if: $points &gt;= 11)[
 [[Pick it up-&gt;offered]]
+]
+(if: $points &gt;= 8 and $points &lt; 11)[
 [[Pick it up-&gt;referred]]
-[[Pick it up-&gt;rejected]]</tw-passagedata><tw-passagedata pid="47" name="offered" tags="blankBackground" position="216,3627" size="100,100">You pick up and they tell you:
--We were impressed with your interview performance, particularly your __variable__, and we’d like to offer you the position
-[[Conclusion-&gt;happy]]</tw-passagedata><tw-passagedata pid="48" name="rejected" tags="blankBackground" position="487,3638" size="100,100">You pick up and they tell you
+]
+(if: $points &lt; 8)[
+[[Pick it up-&gt;rejected]]
+]</tw-passagedata><tw-passagedata pid="47" name="offered" tags="blankBackground" position="216,3627" size="100,100">You pick up and they tell you:
+-We were impressed with your interview performance and we’d like to offer you the position.
+[[Conclusion-&gt;happy]]</tw-passagedata><tw-passagedata pid="48" name="rejected" tags="blankBackground" position="489,3627" size="100,100">You pick up and they tell you
 We’re sorry to inform you we cannot offer you the position, have a good day!
 [[Conclusion-&gt;rip]]
 </tw-passagedata><tw-passagedata pid="49" name="referred" tags="blankBackground" position="344,3629" size="100,100">You pick up and they tell you:
-You did well enough in the interview that we’re referring you to another department who will value your __variable__.
+You did well enough in the interview that we’re referring you to another department.
 [[Conclusion-&gt;disappointed]]</tw-passagedata><tw-passagedata pid="50" name="happy" tags="" position="216,3777" size="100,100">You can’t believe it. It will take a while to climb out of all the debt your in and reach the point where you can afford to heat the house above 60, and get a better wireless connection that 1Meg, but it looks like things are finally going to go right for you. If you can just scrape by until the job startings, everything will be ok.
 [[Title]]</tw-passagedata><tw-passagedata pid="51" name="disappointed" tags="" position="344,3779" size="100,100">This should be good news, but its not. You’re no better off than you were before you applied, and every day you check your bank statement and see more and more red. It’s a good thing you haven&#39;t got COVID yet, because it’s doubtful you could afford it. Regardless, this opportunity is better than nothing, and you might be able to stretch until the next interview.
 [[Title]]</tw-passagedata><tw-passagedata pid="52" name="rip" tags="" position="487,3788" size="100,100">The words hit you like a brick smashed against the back of your head. You feel yourself crumple onto your carpet as you hang up. Every avenue has been exhausted. Your parents can’t support you any longer, you can’t borrow more money, and it seems as though there’s not a job left on earth you haven&#39;t applied for and been rejected from. Even the money you make on the side driving for Uber is drying up. If only your school had trained you better to handle the fluff of an interview, if only... if only. 
@@ -412,7 +416,7 @@ To: You
 --------
 Sorry about the wait, here is the link to the meeting: 
 [[https://zoom.us.com/meeting/join/5i5ackv56-&gt;Retried and worked]]
-]</tw-passagedata></tw-storydata>
+]</tw-passagedata><tw-passagedata pid="60" name="Passage 1 Link Here" tags="" position="78,3625" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="61" name="Passage 2 link here" tags="" position="0,3737" size="100,100">Double-click this passage to edit it.</tw-passagedata></tw-storydata>
 
 <script title="Twine engine code" data-main="harlowe">"use strict";function _defineProperty(e,t,n){return t in e?Object.defineProperty(e,t,{value:n,enumerable:!0,configurable:!0,writable:!0}):e[t]=n,e}function _toConsumableArray(e){if(Array.isArray(e)){for(var t=0,n=Array(e.length);t<e.length;t++)n[t]=e[t];return n}return Array.from(e)}var _slicedToArray=function(){function e(e,t){var n=[],r=!0,i=!1,o=void 0;try{for(var a,s=e[Symbol.iterator]();!(r=(a=s.next()).done)&&(n.push(a.value),!t||n.length!==t);r=!0);}catch(e){i=!0,o=e}finally{try{!r&&s.return&&s.return()}finally{if(i)throw o}}return n}return function(t,n){if(Array.isArray(t))return t;if(Symbol.iterator in Object(t))return e(t,n);throw new TypeError("Invalid attempt to destructure non-iterable instance")}}(),_typeof="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e};!function(){/**
  * @license almond 0.3.3 Copyright jQuery Foundation and other contributors.
