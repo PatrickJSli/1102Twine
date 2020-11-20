@@ -226,7 +226,7 @@ That won’t be necessary thank you, but we’re glad to hear you’ve been prod
 (else:)[You&#39;ve given us a lot to think about.  We will be contacting you soon with our decision.  Thank you for your time.]
 [[Title]]
 (link: &quot;Quit&quot;)[&lt;script&gt;window.close()&lt;/script&gt;]
-&lt;audio src=&quot;https://github.com/PatrickJSli/1102Twine/blob/main/audio/heartbeat.mp3&quot; autoplay&gt;</tw-passagedata><tw-passagedata pid="25" name="[Play" tags="" position="213,271" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="26" name="Invalid ID" tags="loadingBackground" position="751,385" size="100,100">=&gt;&lt;=
+&lt;audio src=&quot;https://github.com/PatrickJSli/1102Twine/blob/main/audio/heartbeat.mp3&quot; autoplay&gt;</tw-passagedata><tw-passagedata pid="25" name="Invalid ID" tags="loadingBackground" position="751,385" size="100,100">=&gt;&lt;=
 
 
 (font: &quot;Times New Roman&quot;)+(color: red)[##INVALID MEETING ID]
@@ -234,12 +234,13 @@ That won’t be necessary thank you, but we’re glad to hear you’ve been prod
 
 
 |options&gt;[What are my options?]
+&lt;==
 (click:?options)[(replace:?options)[](show:?email)(show:?phone)(show:?retry)(show:?wait)]
 |email)[[[1-Send them a politely worded email asking them what&#39;s going on. Emails are the most formal after all-&gt;Email]]]
 |phone)[[[2-Phone their careers department to ask about the situation, they’ll have an answer for you.-&gt;Phone]]]
 |retry)[[[3-Re-login to bluejeans, that should fix it right?-&gt;Retry]]]
 |wait)[[[4-They might already know about the issue, best just to wait for them to contact you.-&gt;Wait]]]
-(set: $late to false)</tw-passagedata><tw-passagedata pid="27" name="q4" tags="question interviewBackground" position="500,2098" size="100,100">=&gt;&lt;=
+(set: $late to false)</tw-passagedata><tw-passagedata pid="26" name="q4" tags="question interviewBackground" position="500,2098" size="100,100">=&gt;&lt;=
 ####Lets move on to the practical questions. We want to see how you’ll perform in the role, and also get an idea of you broad problem solving skills.
 
 &lt;==
@@ -247,7 +248,7 @@ That won’t be necessary thank you, but we’re glad to hear you’ve been prod
 [[2-Yes, I&#39;d appreciate that-&gt;q5]]
 [[3-It&#39;s a shame, I was enjoying our conversation-&gt;q5]]
 [[4-Yes, let&#39;s get past the trivialities-&gt;q5]]
-</tw-passagedata><tw-passagedata pid="28" name="q5" tags="question interviewBackground" position="500,2248" size="100,100">=&gt;&lt;=
+</tw-passagedata><tw-passagedata pid="27" name="q5" tags="question interviewBackground" position="500,2248" size="100,100">=&gt;&lt;=
 ### Alright, we’re first going to text your critical thinking and problem solving skills using a short riddle. In this problem we’d like you to evaluate the statement “This statement is false”.
 
 &lt;==
@@ -255,74 +256,81 @@ That won’t be necessary thank you, but we’re glad to hear you’ve been prod
 [[2-It&#39;s a paradoxical statement. If the statement is false, then saying &quot;this statement is false&quot; is true, which is contradictory. If the statement is true, then it must be false, which is also contradictory.-&gt;r52]] 
 [[3-Here I thought you were going to have me do a CS problem, but no your asking me a riddle, a riddle which is actually a philosophical paradox. Could we please please please please move on to the part of the interview that makes sense.-&gt;r53]]
 [[4-You know that’s a genius question, I would have never thought of it.-&gt;r54]]
-[[5-This statement is false, what’s to evaluate. Seems pretty straightforward to me.-&gt;r55]]</tw-passagedata><tw-passagedata pid="29" name="r51" tags="interviewBackground" position="200,2398" size="100,100">
+[[5-This statement is false, what’s to evaluate. Seems pretty straightforward to me.-&gt;r55]]</tw-passagedata><tw-passagedata pid="28" name="r51" tags="interviewBackground" position="200,2398" size="100,100">
 
 At our company, we value critical thinking. The point of this task is not to be a useful statement, but to be a thought exercise.
 [[Continue-&gt;q6]]
-(set: $points to $points + 1)</tw-passagedata><tw-passagedata pid="30" name="r52" tags="interviewBackground" position="350,2399" size="100,100">
+(set: $points to $points + 1)</tw-passagedata><tw-passagedata pid="29" name="r52" tags="interviewBackground" position="350,2399" size="100,100">
 
 Good answer. At our company, we value critical thinking, and it seems you have that.
 [[Continue-&gt;q6]]
-(set: $points to $points + 3)</tw-passagedata><tw-passagedata pid="31" name="r53" tags="interviewBackground" position="500,2399" size="100,100">
+(set: $points to $points + 3)</tw-passagedata><tw-passagedata pid="30" name="r53" tags="interviewBackground" position="500,2399" size="100,100">
 
 At our company, we value critical thinking. That includes thinking about topics not just related to CS.
 [[Continue-&gt;q6]]
-(set: $points to $points - 1)</tw-passagedata><tw-passagedata pid="32" name="r54" tags="interviewBackground" position="650,2399" size="100,100">
+(set: $points to $points - 1)</tw-passagedata><tw-passagedata pid="31" name="r54" tags="interviewBackground" position="650,2399" size="100,100">
 
 Glad you think so. How about answering it?
 [[Try again-&gt;q5]]
-(set: $points to $points - 2)</tw-passagedata><tw-passagedata pid="33" name="r55" tags="interviewBackground" position="800,2399" size="100,100">
+(set: $points to $points - 2)</tw-passagedata><tw-passagedata pid="32" name="r55" tags="interviewBackground" position="800,2399" size="100,100">
 
 I see
 [[Continue-&gt;q6]]
-(set: $points to $points - 1)</tw-passagedata><tw-passagedata pid="34" name="q6" tags="question interviewBackground" position="515,2555" size="100,100">=&gt;&lt;=
+(set: $points to $points - 1)</tw-passagedata><tw-passagedata pid="33" name="q6" tags="question interviewBackground" position="515,2555" size="100,100">=&gt;&lt;=
 ####Just as the interviewers start explaining their next problem for you to address, you get a knock on the door. The gas company said they’d be coming today to install a new pay as you go meter because you haven&#39;t been paying the gas bill on time. If you don’t answer the door and help them install it they’ll cut off your gas, and winter is coming. What do you do?
 
 &lt;==
 [[1-Politely excuse yourself, mentioning the peculiarities of an online interview, to attend to something urgent.-&gt;r61]]
 [[2-Explain the situation with the gas company, and ask if they can give you 15 minutes to work it out.-&gt;r62]]
 [[3-Offer no explanation and try and rush through the installation.-&gt;r63]]
-[[4-Lie and say you wifi router is cutting in and out and you need to go fix it.-&gt;r64]]</tw-passagedata><tw-passagedata pid="35" name="r61" tags="interviewBackground" position="290,2705" size="100,100">
+[[4-Lie and say you wifi router is cutting in and out and you need to go fix it.-&gt;r64]]</tw-passagedata><tw-passagedata pid="34" name="r61" tags="interviewBackground" position="290,2705" size="100,100">
 
 Yes, these are crazy times.
 [[Continue-&gt;q7]]
-(set: $points to $points + 1)</tw-passagedata><tw-passagedata pid="36" name="r62" tags="interviewBackground" position="440,2705" size="100,100">
+(set: $points to $points + 1)</tw-passagedata><tw-passagedata pid="35" name="r62" tags="interviewBackground" position="440,2705" size="100,100">
 
 Now that you are back, let&#39;s resume.
 [[Continue-&gt;q7]]
-(set: $points to $points + 1)</tw-passagedata><tw-passagedata pid="37" name="r63" tags="interviewBackground" position="590,2705" size="100,100">
+(set: $points to $points + 1)</tw-passagedata><tw-passagedata pid="36" name="r63" tags="interviewBackground" position="590,2705" size="100,100">
 
-It is pretty disrespectful to leave in the middle of an interview with no justification. If you don&#39;t have time for us, we don&#39;t have time for you. [[Goodbye]]
-(set: $points to $points - 3)</tw-passagedata><tw-passagedata pid="38" name="r64" tags="" position="740,2705" size="100,100">
+It is pretty disrespectful to leave in the middle of an interview with no justification. If you don&#39;t have time for us, we don&#39;t have time for you. [[Goodbye-&gt;rejectedEarly]]
+(set: $points to $points - 3)</tw-passagedata><tw-passagedata pid="37" name="r64" tags="" position="740,2705" size="100,100">
 
 I certainly hope you won&#39;t be having &quot;wifi issues&quot; in the future given much of your work would be remote if you got this position.
 [[Continue-&gt;q7]]
-(set: $points to $points - 1)</tw-passagedata><tw-passagedata pid="39" name="q7" tags="question interviewBackground" position="290,2855" size="100,100">=&gt;&lt;=
+(set: $points to $points - 1)</tw-passagedata><tw-passagedata pid="38" name="q7" tags="question interviewBackground" position="290,2855" size="100,100">=&gt;&lt;=
 ####Next the interviewers give you a set of CS problems in a language you havn’t used since Sophmore year, and start a clock ticking. For all your anxiety about answering questions that college didn’t prepare you for, it would appear the CS problems will be even more challenging. You can hear the clock ticking as you stare blankly at the first question. Indeed, your interviewers can see that you haven&#39;t written a line. What do you do?
 
 &lt;==
 [[1-Try as best you can with what you remember-&gt;r71]]
 [[2-Hop on google and try and get something off stack overflow-&gt;r72]]
 [[3-Ask if they’ll let you solve this in a different language-&gt;r73]]
-</tw-passagedata><tw-passagedata pid="40" name="Goodbye" tags="" position="590,2855" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="41" name="r71" tags="interviewBackground" position="140,3005" size="100,100">
+</tw-passagedata><tw-passagedata pid="39" name="r71" tags="interviewBackground" position="140,3005" size="100,100">
 
 Not too bad. It&#39;s a pretty difficult problem.
 [[Continue-&gt;endInterview]]
-(set: $points to $points + 1)</tw-passagedata><tw-passagedata pid="42" name="r72" tags="interviewBackground" position="290,3005" size="100,100">
+(set: $points to $points + 1)</tw-passagedata><tw-passagedata pid="40" name="r72" tags="interviewBackground" position="290,3005" size="100,100">
 
 We like to see applicants that can solve problems on their own, but looking things up is always an option.
 [[Continue-&gt;endInterview]] 
-(set: $points to $points + 3)</tw-passagedata><tw-passagedata pid="43" name="r73" tags="interviewBackground" position="440,3005" size="100,100">
+(set: $points to $points + 3)</tw-passagedata><tw-passagedata pid="41" name="r73" tags="interviewBackground" position="440,3005" size="100,100">
 
 No, this is the language you will need for the position.
 [[Continue-&gt;endInterview]]
-(set: $points to $points - 1)</tw-passagedata><tw-passagedata pid="44" name="endInterview" tags="interviewBackground" position="291,3177" size="100,100">
+(set: $points to $points - 1)</tw-passagedata><tw-passagedata pid="42" name="endInterview" tags="interviewBackground" position="291,3177" size="100,100">
 
 That is all we have time for right now. Thank you for applying. You will be contacted soon if you are selected for the position.
 [[End Interview-&gt;wait]]
-</tw-passagedata><tw-passagedata pid="45" name="wait" tags="blankBackground" position="291,3327" size="100,100">make it so you have to keep clicking wait multiple times before moving on
-[[wait-&gt;call]]</tw-passagedata><tw-passagedata pid="46" name="call" tags="blankBackground" position="291,3477" size="100,100">You wait a couple weeks, and your finances keep getting tighter and tighter. Every time the phone rings you jump out of your shoes to answer it. One particularly cold morning the phone rings
-Final version will automatically selection decision
+</tw-passagedata><tw-passagedata pid="43" name="wait" tags="blankBackground" position="291,3327" size="100,100">|hold1&gt;[wait]
+|hold2)[wait]
+|hold3)[wait]
+|hold4)[wait]
+|hold5)[
+Then finally [[the phone rings-&gt;call]]]
+(click: ?hold1)[(show:?hold2)]
+(click: ?hold2)[(show:?hold3)]
+(click: ?hold3)[(show:?hold4)]
+(click: ?hold4)[(show:?hold5)]</tw-passagedata><tw-passagedata pid="44" name="call" tags="blankBackground" position="291,3477" size="100,100">You stare at it anxiously. During all this waiting, your bank account has been dwindling. You need this job.
 
 (if: $points &gt;= 11)[
 [[Pick it up-&gt;offered]]
@@ -332,17 +340,17 @@ Final version will automatically selection decision
 ]
 (if: $points &lt; 8)[
 [[Pick it up-&gt;rejected]]
-]</tw-passagedata><tw-passagedata pid="47" name="offered" tags="blankBackground" position="216,3627" size="100,100">You pick up and they tell you:
+]</tw-passagedata><tw-passagedata pid="45" name="offered" tags="blankBackground" position="216,3627" size="100,100">You pick up and they tell you:
 -We were impressed with your interview performance and we’d like to offer you the position.
-[[Conclusion-&gt;happy]]</tw-passagedata><tw-passagedata pid="48" name="rejected" tags="blankBackground" position="489,3627" size="100,100">You pick up and they tell you
+[[Conclusion-&gt;happy]]</tw-passagedata><tw-passagedata pid="46" name="rejected" tags="blankBackground" position="489,3627" size="100,100">You pick up and they tell you
 We’re sorry to inform you we cannot offer you the position, have a good day!
 [[Conclusion-&gt;rip]]
-</tw-passagedata><tw-passagedata pid="49" name="referred" tags="blankBackground" position="344,3629" size="100,100">You pick up and they tell you:
+</tw-passagedata><tw-passagedata pid="47" name="referred" tags="blankBackground" position="344,3629" size="100,100">You pick up and they tell you:
 You did well enough in the interview that we’re referring you to another department.
-[[Conclusion-&gt;disappointed]]</tw-passagedata><tw-passagedata pid="50" name="happy" tags="" position="216,3777" size="100,100">You can’t believe it. It will take a while to climb out of all the debt your in and reach the point where you can afford to heat the house above 60, and get a better wireless connection that 1Meg, but it looks like things are finally going to go right for you. If you can just scrape by until the job startings, everything will be ok.
-[[Title]]</tw-passagedata><tw-passagedata pid="51" name="disappointed" tags="" position="344,3779" size="100,100">This should be good news, but its not. You’re no better off than you were before you applied, and every day you check your bank statement and see more and more red. It’s a good thing you haven&#39;t got COVID yet, because it’s doubtful you could afford it. Regardless, this opportunity is better than nothing, and you might be able to stretch until the next interview.
-[[Title]]</tw-passagedata><tw-passagedata pid="52" name="rip" tags="" position="487,3788" size="100,100">The words hit you like a brick smashed against the back of your head. You feel yourself crumple onto your carpet as you hang up. Every avenue has been exhausted. Your parents can’t support you any longer, you can’t borrow more money, and it seems as though there’s not a job left on earth you haven&#39;t applied for and been rejected from. Even the money you make on the side driving for Uber is drying up. If only your school had trained you better to handle the fluff of an interview, if only... if only. 
-[[Title]]</tw-passagedata><tw-passagedata pid="53" name="Email" tags="blankBackground" position="561,711" size="100,100">&lt;script&gt;
+[[Conclusion-&gt;disappointed]]</tw-passagedata><tw-passagedata pid="48" name="happy" tags="" position="216,3777" size="100,100">You can’t believe it. It will take a while to climb out of all the debt your in and reach the point where you can afford to heat the house above 60, and get a better wireless connection that 1Meg, but it looks like things are finally going to go right for you. If you can just scrape by until the job startings, everything will be ok.
+[[Title]]</tw-passagedata><tw-passagedata pid="49" name="disappointed" tags="" position="344,3779" size="100,100">This should be good news, but its not. You’re no better off than you were before you applied, and every day you check your bank statement and see more and more red. It’s a good thing you haven&#39;t got COVID yet, because it’s doubtful you could afford it. Regardless, this opportunity is better than nothing, and you might be able to stretch until the next interview.
+[[Title]]</tw-passagedata><tw-passagedata pid="50" name="rip" tags="" position="487,3788" size="100,100">The words hit you like a brick smashed against the back of your head. You feel yourself crumple onto your carpet as you hang up. Every avenue has been exhausted. Your parents can’t support you any longer, you can’t borrow more money, and it seems as though there’s not a job left on earth you haven&#39;t applied for and been rejected from. Even the money you make on the side driving for Uber is drying up. If only your school had trained you better to handle the fluff of an interview, if only... if only. 
+[[Title]]</tw-passagedata><tw-passagedata pid="51" name="Email" tags="blankBackground" position="561,711" size="100,100">&lt;script&gt;
 var audio= document.createElement(&#39;audio&#39;);
 audio.src=&#39;https://github.com/PatrickJSli/1102Twine/blob/main/audio/send.mp3?raw=true&#39;;
 audio.loop = false;
@@ -354,7 +362,7 @@ From: Company
 To: You
 ----------------------------------
 Sorry about that mishap, here is the correct meeting ID:
-[[https://zoom.us.com/meeting/join/5i5ackv56-&gt;Retried and worked]]</tw-passagedata><tw-passagedata pid="54" name="Phone" tags="blankBackground" position="687,621" size="100,100">&lt;script&gt;
+[[https://zoom.us.com/meeting/join/5i5ackv56-&gt;Retried and worked]]</tw-passagedata><tw-passagedata pid="52" name="Phone" tags="blankBackground" position="687,621" size="100,100">&lt;script&gt;
 var audio= document.createElement(&#39;audio&#39;);
 audio.src=&#39;https://github.com/PatrickJSli/1102Twine/blob/main/audio/phone.mp3?raw=true&#39;;
 audio.loop = false;
@@ -369,14 +377,14 @@ Here&#39;s the ID: [[5i5ackv56-&gt;Retried and worked]]]
 (click: ?hold1)[(show:?hold2)]
 (click: ?hold2)[(show:?hold3)]
 (click: ?hold3)[(show:?hold4)]
-(click: ?hold4)[(show:?hold5)]</tw-passagedata><tw-passagedata pid="55" name="Retry" tags="blankBackground" position="1005,569" size="100,100">=&gt;&lt;=
+(click: ?hold4)[(show:?hold5)]</tw-passagedata><tw-passagedata pid="53" name="Retry" tags="blankBackground" position="1005,569" size="100,100">=&gt;&lt;=
 (set: $randNum to (random:1,2))
 (if: $randNum is 1)[(go-to: &quot;Retried and worked&quot;)]
 (else:)[(set: $late to true)
 Well that didn&#39;t work....
 [[1-Send them a politely worded email asking them what&#39;s going on. Emails are the most formal after all-&gt;Email]]
 [[2-Phone their careers department to ask about the situation, they’ll have an answer for you.-&gt;Phone]]
-[[3-They might already know about the issue, best just to wait for them to contact you.-&gt;Wait]]]</tw-passagedata><tw-passagedata pid="56" name="Wait" tags="blankBackground" position="1115,734" size="100,100">=&gt;&lt;=
+[[3-They might already know about the issue, best just to wait for them to contact you.-&gt;Wait]]]</tw-passagedata><tw-passagedata pid="54" name="Wait" tags="blankBackground" position="1115,734" size="100,100">=&gt;&lt;=
 (set: $late to true)
 |wait1&gt;[You wait...]
 |wait2)[Still waiting...]
@@ -392,15 +400,16 @@ Keep waiting or try something else...
 (click: ?wait2)[(show:?wait3)]
 (click: ?wait3)[(show:?wait4)]
 (click: ?wait4)[(show:?ending-wait)]
-</tw-passagedata><tw-passagedata pid="57" name="Greetings" tags="interviewBackground" position="535,872" size="100,100">=&gt;&lt;=
+</tw-passagedata><tw-passagedata pid="55" name="Greetings" tags="interviewBackground" position="535,872" size="100,100">=&gt;&lt;=
 (if: $late is true)[(set: $points to ($points - 3))Well hello, you’ve wasted enough of our time with your tardiness already, get on with introducing yourself so we can finish up in time for the next interviewee, who in all likelihood will have enough respect to be on time.]
 (else:)[Hi, I’m your interviewer, sorry about that whole meeting ID business. How about you go ahead and introduce yourself.]
+&lt;==
 (click: ?apologetic)[(set: $points to ($points + 1))]
 (click:?joke)[(set: $points to ($points + 1))]
-|apologetic&gt;[[[1-Hi, my apologies for the whole meeting ID business. My name’s $name and I’m really excited by this opportunity.-&gt;q1]]]
-|joke&gt;[[[2-Yeah, bluejeans is like that sometimes amiright, you get used to it. Anyway my name’s $name and I’m really excited to be here today to discuss this position with you.-&gt;q1]]]
-|ignore&gt;[[[3-Hi, I’m $name and I’m really glad to be talking about this opportunity with you today.-&gt;q1]]]
-|confront&gt;[[[4-Hi, I&#39;m $name. You’re forgiven for the bluejeans issue, happens all the time. Anyway, I’m really excited to discuss this opportunity with you.-&gt;q1]]]</tw-passagedata><tw-passagedata pid="58" name="Retried and worked" tags="loadingBackground" position="795,899" size="100,100">
+|apologetic&gt;[[[1-Hi, my apologies for the whole meeting ID business. My name’s $name and I’m really excited by this opportunity.-&gt;startInterview]]]
+|joke&gt;[[[2-Yeah, bluejeans is like that sometimes amiright, you get used to it. Anyway my name’s $name and I’m really excited to be here today to discuss this position with you.-&gt;startInterview]]]
+|ignore&gt;[[[3-Hi, I’m $name and I’m really glad to be talking about this opportunity with you today.-&gt;startInterview]]]
+|confront&gt;[[[4-Hi, I&#39;m $name. You’re forgiven for the bluejeans issue, happens all the time. Anyway, I’m really excited to discuss this opportunity with you.-&gt;startInterview]]]</tw-passagedata><tw-passagedata pid="56" name="Retried and worked" tags="loadingBackground" position="795,899" size="100,100">
 
 
 
@@ -408,7 +417,7 @@ Keep waiting or try something else...
 
 =&gt;&lt;=
 
-[[Join Meeting-&gt;Greetings]]</tw-passagedata><tw-passagedata pid="59" name="Wait2" tags="blankBackground" position="976,925" size="100,100">&lt;script&gt;
+[[Join Meeting-&gt;Greetings]]</tw-passagedata><tw-passagedata pid="57" name="Wait2" tags="blankBackground" position="976,925" size="100,100">&lt;script&gt;
 var audio= document.createElement(&#39;audio&#39;);
 audio.src=&#39;https://github.com/PatrickJSli/1102Twine/blob/main/audio/send.mp3?raw=true&#39;;
 audio.loop = false;
@@ -437,7 +446,12 @@ To: You
 --------
 Sorry about the wait, here is the link to the meeting: 
 [[https://zoom.us.com/meeting/join/5i5ackv56-&gt;Retried and worked]]
-]]</tw-passagedata><tw-passagedata pid="60" name="Passage 1 Link Here" tags="" position="78,3625" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="61" name="Passage 2 link here" tags="" position="0,3737" size="100,100">Double-click this passage to edit it.</tw-passagedata></tw-storydata>
+]]</tw-passagedata><tw-passagedata pid="58" name="Passage 1 Link Here" tags="" position="78,3625" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="59" name="Passage 2 link here" tags="" position="0,3737" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="60" name="[Play" tags="" position="144,290.5" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="61" name="startInterview" tags="interviewBackground" position="382,920" size="100,100">=&gt;&lt;=
+
+
+
+Awesome
+[[Let&#39;s get started-&gt;q1]]</tw-passagedata></tw-storydata>
 
 <script title="Twine engine code" data-main="harlowe">"use strict";function _defineProperty(e,t,n){return t in e?Object.defineProperty(e,t,{value:n,enumerable:!0,configurable:!0,writable:!0}):e[t]=n,e}function _toConsumableArray(e){if(Array.isArray(e)){for(var t=0,n=Array(e.length);t<e.length;t++)n[t]=e[t];return n}return Array.from(e)}var _slicedToArray=function(){function e(e,t){var n=[],r=!0,i=!1,o=void 0;try{for(var a,s=e[Symbol.iterator]();!(r=(a=s.next()).done)&&(n.push(a.value),!t||n.length!==t);r=!0);}catch(e){i=!0,o=e}finally{try{!r&&s.return&&s.return()}finally{if(i)throw o}}return n}return function(t,n){if(Array.isArray(t))return t;if(Symbol.iterator in Object(t))return e(t,n);throw new TypeError("Invalid attempt to destructure non-iterable instance")}}(),_typeof="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e};!function(){/**
  * @license almond 0.3.3 Copyright jQuery Foundation and other contributors.
