@@ -378,15 +378,25 @@ Well that didn&#39;t work....
 [[2-Phone their careers department to ask about the situation, they’ll have an answer for you.-&gt;Phone]]
 [[3-They might already know about the issue, best just to wait for them to contact you.-&gt;Wait]]]</tw-passagedata><tw-passagedata pid="56" name="Wait" tags="blankBackground" position="1115,734" size="100,100">=&gt;&lt;=
 (set: $late to true)
+|wait1&gt;[You wait...]
+|wait2)[Still waiting...]
+|wait3)[You keep waiting...]
+|wait4)[It&#39;s been a while at this point...]
+|ending-wait)[
 Keep waiting or try something else...
 [[1-Send them a politely worded email asking them what&#39;s going on. Emails are the most formal after all-&gt;Email]]
 [[2-Phone their careers department to ask about the situation, they’ll have an answer for you.-&gt;Phone]]
 [[3-Re-login to bluejeans, that should fix it right?-&gt;Retry]]
-[[4-They might already know about the issue, best just to wait for them to contact you.-&gt;Wait2]]
+[[4-Keep waiting.-&gt;Wait2]]]
+(click: ?wait1)[(show:?wait2)]
+(click: ?wait2)[(show:?wait3)]
+(click: ?wait3)[(show:?wait4)]
+(click: ?wait4)[(show:?ending-wait)]
 </tw-passagedata><tw-passagedata pid="57" name="Greetings" tags="interviewBackground" position="535,872" size="100,100">=&gt;&lt;=
 (if: $late is true)[(set: $points to ($points - 3))Well hello, you’ve wasted enough of our time with your tardiness already, get on with introducing yourself so we can finish up in time for the next interviewee, who in all likelihood will have enough respect to be on time.]
 (else:)[Hi, I’m your interviewer, sorry about that whole meeting ID business. How about you go ahead and introduce yourself.]
-(click: ?apologetic or ?joke)[(set: $points to ($points + 1))]
+(click: ?apologetic)[(set: $points to ($points + 1))]
+(click:?joke)[(set: $points to ($points + 1))]
 |apologetic&gt;[[[1-Hi, my apologies for the whole meeting ID business. My name’s $name and I’m really excited by this opportunity.-&gt;q1]]]
 |joke&gt;[[[2-Yeah, bluejeans is like that sometimes amiright, you get used to it. Anyway my name’s $name and I’m really excited to be here today to discuss this position with you.-&gt;q1]]]
 |ignore&gt;[[[3-Hi, I’m $name and I’m really glad to be talking about this opportunity with you today.-&gt;q1]]]
@@ -398,7 +408,18 @@ Keep waiting or try something else...
 
 =&gt;&lt;=
 
-[[Join Meeting-&gt;Greetings]]</tw-passagedata><tw-passagedata pid="59" name="Wait2" tags="blankBackground" position="976,925" size="100,100">(set: $randNum2 to (random: 1,4))
+[[Join Meeting-&gt;Greetings]]</tw-passagedata><tw-passagedata pid="59" name="Wait2" tags="blankBackground" position="976,925" size="100,100">&lt;script&gt;
+var audio= document.createElement(&#39;audio&#39;);
+audio.src=&#39;https://github.com/PatrickJSli/1102Twine/blob/main/audio/send.mp3?raw=true&#39;;
+audio.loop = false;
+audio.play();
+&lt;/script&gt;
+(set: $randNum2 to (random: 1,4))
+=&gt;&lt;=
+|recieved&gt;[You received an email from the company.]
+(click: ?recieved)[(replace:?recieved)[](show:?restOfPassage)]
+&lt;=
+|restOfPassage)[
 (if: $randNum2 is 4)[
 #MAIL
 From: Company
@@ -416,7 +437,7 @@ To: You
 --------
 Sorry about the wait, here is the link to the meeting: 
 [[https://zoom.us.com/meeting/join/5i5ackv56-&gt;Retried and worked]]
-]</tw-passagedata><tw-passagedata pid="60" name="Passage 1 Link Here" tags="" position="78,3625" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="61" name="Passage 2 link here" tags="" position="0,3737" size="100,100">Double-click this passage to edit it.</tw-passagedata></tw-storydata>
+]]</tw-passagedata><tw-passagedata pid="60" name="Passage 1 Link Here" tags="" position="78,3625" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="61" name="Passage 2 link here" tags="" position="0,3737" size="100,100">Double-click this passage to edit it.</tw-passagedata></tw-storydata>
 
 <script title="Twine engine code" data-main="harlowe">"use strict";function _defineProperty(e,t,n){return t in e?Object.defineProperty(e,t,{value:n,enumerable:!0,configurable:!0,writable:!0}):e[t]=n,e}function _toConsumableArray(e){if(Array.isArray(e)){for(var t=0,n=Array(e.length);t<e.length;t++)n[t]=e[t];return n}return Array.from(e)}var _slicedToArray=function(){function e(e,t){var n=[],r=!0,i=!1,o=void 0;try{for(var a,s=e[Symbol.iterator]();!(r=(a=s.next()).done)&&(n.push(a.value),!t||n.length!==t);r=!0);}catch(e){i=!0,o=e}finally{try{!r&&s.return&&s.return()}finally{if(i)throw o}}return n}return function(t,n){if(Array.isArray(t))return t;if(Symbol.iterator in Object(t))return e(t,n);throw new TypeError("Invalid attempt to destructure non-iterable instance")}}(),_typeof="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e};!function(){/**
  * @license almond 0.3.3 Copyright jQuery Foundation and other contributors.
